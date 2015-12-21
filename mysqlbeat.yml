@@ -1,0 +1,7 @@
+input:
+  urls:
+    - mysql://nagios:secret@127.0.0.1
+  period: 10
+output:
+  elasticsearch:
+    hosts: ["localhost:9200"]

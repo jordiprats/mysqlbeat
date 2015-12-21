@@ -12,14 +12,14 @@ var Version = "0.1.0"
 var Name = "mysqlbeat"
 
 func main() {
-	nb := &MySQLbeat{}
+	mb := &Mysqlbeat{}
 
-	b := beat.NewBeat(Name, Version, nb)
+	b := beat.NewBeat(Name, Version, mb)
 
 	b.CommandLineSetup()
 
 	b.LoadConfig()
-	err := nb.Config(b)
+	err := mb.Config(b)
 	if err != nil {
 		logp.Critical("Config error: %v", err)
 		os.Exit(1)
